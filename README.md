@@ -39,7 +39,7 @@ This is the Iot Platform in which the data will be stored which will then be exp
 Code
  This is the code I Used to demonstrate and see the X, Y and Z   
 Accelerometer at equilibrium.
-
+```
 from sense_hat import SenseHat
 sense = SenseHat
 
@@ -49,14 +49,13 @@ while True:
             y=round(y,0)
             z=(round(z,0)
             print("x%s, y%s, z%s" % (x, y, z))
-        
-    
+ ```
       
  this shows a live axial movement of the accelerometer.
 The data was then supposed to be imported onto wia.
 
 This is the code taking the data onto wia. There’s an error in the code.
-
+```
 from wia import Wia
 import time 
 import random
@@ -75,7 +74,7 @@ while True:
          wia.Event.publish(name="Accelerometer Values", data="x%s"%(x))
          wia.Event.publish(name="Accelerometer Values", data="y%s"%(y))
          wia.Event.publish(name="Accelerometer Values", data="z%s"%(z))
-         
+ ```        
  
 Theres an error , in which inhibits for the data to be sent over to wia .
 
